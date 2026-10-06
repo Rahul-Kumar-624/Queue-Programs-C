@@ -43,7 +43,7 @@ void deleteFront() {
         printf("Deque Underflow!\n");
     } else {
         printf("Deleted from Front: %d\n", deque[front]);
-        if (front == rear) {
+        if (front == rear) { // Sirf 1 element bacha ho toh reset karein
             front = -1;
             rear = -1;
         } else if (front == SIZE - 1) {
@@ -59,7 +59,7 @@ void deleteRear() {
         printf("Deque Underflow!\n");
     } else {
         printf("Deleted from Rear: %d\n", deque[rear]);
-        if (front == rear) {
+        if (front == rear) { // Sirf 1 element bacha ho toh reset karein
             front = -1;
             rear = -1;
         } else if (rear == 0) {
@@ -86,15 +86,15 @@ void display() {
 }
 
 int main() {
-    // Operations as specified[cite: 1]
-    insertFront(10);[cite: 1]
-    insertRear(20);[cite: 1]
-    insertFront(30);[cite: 1]
+    // Question 3 ke according operations[cite: 1]:
+    insertFront(10);
+    insertRear(20);
+    insertFront(30);
 
-    deleteFront();[cite: 1]
-    deleteRear();[cite: 1]
+    deleteFront();
+    deleteRear();
 
-    display();[cite: 1]
+    display();
 
     return 0;
 }
